@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guestbook Summary</title>
+</head>
+<body>
+    <h1>Guestbook Entries</h1>
+
+    <% if (guestbookEntries.length === 0) { %>
+        <p>No entries found.</p>
+    <% } else { %>
+        <% guestbookEntries.forEach(function(entry) { %>
+            <p>
+                <strong>Name:</strong> <%= entry.first_name %> <%= entry.last_name %> <br>
+                <strong>Email:</strong> <%= entry.email %> <br>
+                <strong>Message:</strong> <%= entry.message || 'No message' %> <br>
+                <strong>Submitted On:</strong> <%= entry.timestamp %>
+            </p>
+            <hr>
+        <% }); %>
+    <% } %>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

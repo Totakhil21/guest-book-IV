@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation</title>
+</head>
+<body>
+  <h1>Thank You for Signing the Guestbook!</h1>
+  <h2>Your Submission:</h2>
+  <p>Name: <%= entry.firstName %> <%= entry.lastName %></p>
+  <p>Email: <%= entry.email %></p>
+  <p>Job Title: <%= entry.jobTitle || 'N/A' %></p>
+  <p>Company: <%= entry.company || 'N/A' %></p>
+  <p>LinkedIn: <%= entry.linkedin || 'N/A' %></p>
+  <p>How We Met: <%= entry.meet || entry.other || 'N/A' %></p>
+  <p>Message: <%= entry.message || 'No message provided' %></p>
+  <p>Mailing List: <%= entry.mailingList ? 'Yes' : 'No' %></p>
+  <p>Email Format: <%= entry.emailFormat || 'N/A' %></p>
+  <p>Submitted On: <%= entry.timestamp %></p>
+  <br>
+  <a href="/">Back to Home</a> <br>
+  <a href="/admin">View Admin Summary</a>
+</body>
+</html>
